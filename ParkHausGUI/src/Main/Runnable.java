@@ -96,7 +96,7 @@ public class Runnable extends JFrame {
             }
             else {
                 Ticket ticket = ph.etagen[i].parkplaetze[j].auto.ticket;
-                String s ="<html>Main.Ticket ID: " + ticket.id +"<br /> "+"Parkbeginn: " + new Date(ticket.getParkbeginn()).toString() + "<br />"
+                String s ="<html>Ticket ID: " + ticket.id +"<br /> "+"Parkbeginn: " + new Date(ticket.getParkbeginn()).toString() + "<br />"
                         +"Aktuelle Zeit: " + new Date(System.currentTimeMillis()) + "<br />"  +"zu zahlen: " + ph.tm.zuZahlen(ticket)+ "</html>";
                 ticketInformation.setText(s);
 
@@ -161,7 +161,7 @@ public class Runnable extends JFrame {
 
             ph.ausfahrt.ticketRein(currentTicket,ph.manager.autos.get(calcPosCar(currentTicket.id)));
             ((JButton)etagen.get(aktPP[0]).getComponent(posComp[aktPP[1]])).setText("<html>etage: "+aktPP[0]+'\n'+"<br />"+"PPNr: "+aktPP[1]+"</html>");
-            ticketInformation.setText("Kein Main.Ticket ausgewaehlt");
+            ticketInformation.setText("Kein Ticket ausgewaehlt");
             ((JLabel)anzeige.getComponent(0)).setText(ph.einfahrt.freiePlaetzeAnzeigen());
                 ((JLabel)anzeige.getComponent(2)).setText("<html> Gesamt Einnahmen: <br />" + ph.manager.getGesamtEinnahmen()+"</html>" );
             ph.manager.prevTickets.add(currentTicket.id);
@@ -215,7 +215,7 @@ public class Runnable extends JFrame {
         ret.setLayout(new GridLayout(i,0));
         for(int j=0;j<i;j++){
             int k = j;
-            JButton btn = new JButton(j+". Main.Etage");
+            JButton btn = new JButton(j+". Etage");
             btn.setBackground(Color.BLUE);
             btn.setForeground(Color.gray);
             btn.addActionListener(e ->{

@@ -8,16 +8,14 @@ import java.io.IOException;
 
 public class SaveLoad {
 
-   static XStream xstream= new XStream();
+    static XStream xstream= new XStream();
     Parkhaus runy;
 
     public SaveLoad(Parkhaus runy) {
 
-
         Class[] classes = new Class[]{Ausfahrt.class, Auto.class, Daten.class, Einfahrt.class,
                 Etage.class, Manager.class, Parkhaus.class, Parkplatz.class, Ticket.class,
                 Ticketautomat.class};
-       //XStream.setupDefaultSecurity(xstream);
         xstream.allowTypes(classes);
 
         this.runy = runy;
@@ -39,8 +37,7 @@ public class SaveLoad {
 
     public static Parkhaus load() throws Exception {
 
-       Parkhaus     parkhausAusXML = (Parkhaus) xstream.fromXML(new FileReader("xml.xml"));
-
+       Parkhaus parkhausAusXML = (Parkhaus) xstream.fromXML(new FileReader("xml.xml"));
         return parkhausAusXML;
     }
 }

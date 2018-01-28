@@ -17,11 +17,7 @@ public class Run {
                 e.printStackTrace();
             }
         }
-
-
-       gui =  new Runnable(runy);
+        gui =  new Runnable(runy);
         gui.setVisible(true);
     }
-
-
 }
