@@ -20,7 +20,7 @@ public class Runnable extends JFrame {
     int [] posComp;
     JPanel inf;
     int aktEtage;
-    JButton fp;
+    Component fp;
     JButton reset;
     JPanel content;
 
@@ -108,18 +108,8 @@ public class Runnable extends JFrame {
 
     }
 
-    private JLabel freiePlaetze(){
-        JLabel jl = new JLabel(ph.einfahrt.freiePlaetzeAnzeigen());
-        return jl;
-    }
 
-    private JLabel ticket(){
-        return null;
-    }
 
-    private JButton bezahlen(){
-        return null;
-    }
 
    static private JLabel seperator(){
         JLabel ret = new JLabel();
@@ -231,9 +221,9 @@ public class Runnable extends JFrame {
 
                 aktEtage = k;
                 Dimension x = currET.getSize();
-                Runnable.this.getContentPane().remove(currET);
+                content.remove(currET);
                 currET = etagen.get(k);
-                Runnable.this.getContentPane().add(currET);
+                content.add(currET);
                 currET.setPreferredSize(x);
                 Runnable.this.pack();
 
