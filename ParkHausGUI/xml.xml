@@ -3,7 +3,17 @@
     <etage>
       <parkplaetze>
         <parkplatz>
-          <empty>true</empty>
+          <empty>false</empty>
+          <auto>
+            <id>3</id>
+            <ticket>
+              <id>3</id>
+              <parkbeginn>1517151617960</parkbeginn>
+              <parkende>0</parkende>
+              <preis>0.0</preis>
+              <bezahlt>false</bezahlt>
+            </ticket>
+          </auto>
           <i>0</i>
           <j>0</j>
         </parkplatz>
@@ -222,22 +232,12 @@
     </etage>
   </etagen>
   <manager>
-    <datenliste>
-      <Daten>
-        <ticketId>1</ticketId>
-        <von>1517101688693</von>
-        <bis>1517103064238</bis>
-        <parkdauer>1375545</parkdauer>
-        <preis>1375.0</preis>
-      </Daten>
-    </datenliste>
+    <datenliste/>
     <autos/>
-    <preis>1.0</preis>
+    <preis>2.0</preis>
     <parkhaus reference="../.."/>
-    <currentID>2</currentID>
-    <prevTickets>
-      <int>1</int>
-    </prevTickets>
+    <currentID>1</currentID>
+    <prevTickets/>
   </manager>
   <einfahrt>
     <manager reference="../../manager"/>
@@ -248,6 +248,6 @@
   <tm>
     <zeitTicketEingefuehrt>0</zeitTicketEingefuehrt>
     <manager reference="../../manager"/>
-    <preis>1.0</preis>
+    <preis>0.0</preis>
   </tm>
 </parkhaus>
